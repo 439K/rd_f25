@@ -1,0 +1,324 @@
+/* 全体のスタイル */
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7fae6;
+}
+
+/* コンテンツ全体のレイアウトを中央に */
+.container {
+    width: 100%;
+    max-width: 1200px; /* 拡大 */
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* プロフィール部分と楽曲一覧をまとめて表示するためのレイアウト */
+.profile-list {
+    display: grid;
+    grid-template-columns: 1fr; /* デフォルトで1列 */
+    grid-gap: 30px;
+    margin: 30px;
+}
+
+.profile-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 縦方向の中央揃え */
+    justify-content: center; /* 横方向の中央揃え */
+    background-color: #fff;
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* プロフィール部分のレイアウト */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 30px;
+    filter: drop-shadow(3px 3px 3px #777777);
+}
+
+.profile-details h1 {
+    font-size: 28px;
+    margin: 0;
+    color: #333;
+}
+
+.profile-details p {
+    font-size: 16px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* 楽曲一覧部分 */
+.music-list {
+    margin-top: 20px;
+}
+
+.music-item {
+    margin-bottom: 15px;
+}
+
+.music-item p {
+    font-size: 18px;
+    color: #555;
+}
+
+audio {
+    min-width: 100%;
+    border-radius: 5px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4fabc;
+}
+
+.top h1 {
+    margin-top: 20px;
+    filter: drop-shadow(3px 3px 3px #777777);
+}
+
+.top img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 30px;
+    filter: drop-shadow(3px 3px 3px #777777);
+}
+
+.caution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 200, 97);
+    padding: 20px;
+}
+
+.tip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 15px;
+}
+
+.tip2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.tip2 img {
+    filter: drop-shadow(3px 3px 3px #777777);
+}
+
+
+.sns {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    grid-gap: 45px;
+    align-items: center;
+}
+
+.song-list {
+    padding: 20px;
+    text-align: center;
+}
+
+.song {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.song:hover {
+    background-color: #ddd;
+}
+
+.player-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f1f1f1;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.player-info {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+    padding-left: 15px;
+}
+
+.player-controls {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#seek-bar {
+    margin: 0 10px;
+    width: 100%;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.current-time, .total-time {
+    font-size: 14px;
+    color: #666;
+}
+
+#play-button img {
+    margin-top: 5px;
+    width: 25px;   /* 幅を40pxに統一 */
+    height: 25px;  /* 高さを40pxに統一 */
+    object-fit: contain;  /* 画像の比率を保持しつつ、ボタンの大きさに収める */
+}
+
+#repeat-button img {
+    margin-top: 5px;
+    width: 30px;   /* 幅を40pxに統一 */
+    height: 30px;  /* 高さを40pxに統一 */
+    object-fit: contain;  /* 画像の比率を保持しつつ、ボタンの大きさに収める */
+}
+
+.questionnaire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 120px;
+}
+
+.song-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* フッターの曲タイトル用の新しいCSS */
+.footer-song-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.music-button {
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #f4fabc; /* デフォルトのボタンカラー */
+    padding: 10px 20px; /* サイズを固定 */
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    width: 350px; /* ボタンの幅を統一 */
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #aaa;
+    transition: background-color 0.3s ease; /* 色が滑らかに変わるようにトランジションを追加 */
+    cursor: pointer; /* ボタンらしく見せる */
+}
+
+.music-button:hover {
+    background-color: #e5e45a; /* ホバー時に少し濃い色にする */
+}
+
+.music-button.playing {
+    background-color: #ffcc00; /* 再生中のボタンの色 */
+}
+
+/* 再生中かつホバー時のスタイル */
+.music-button.playing:hover {
+    background-color: #ffbf00; /* 再生中でもホバーした時に少し濃くする */
+}
+
+/* レスポンシブ対応 */
+@media (min-width: 900px) {
+    .profile-list {
+        grid-template-columns: 1fr 1fr; /* 幅900px以上で2列表示 */
+    }
+}
+
+@media (max-width: 500px) {
+    .top {
+        display: flex;
+        flex-direction: column; /* 子要素を縦に並べる */
+        align-items: center; /* 子要素を中央に揃える */
+        background-color: #f4fabc; /* 背景色を元の色に */
+    }
+
+    .top img {
+        width: 150px; /* 画像の大きさを適切に調整 */
+        height: 100px;
+        margin: 0 auto; /* 中央揃え */
+    }
+
+    .top h1 {
+        margin-top: 0;
+        margin-bottom: 20px; /* 下に少しスペースを空ける */
+        font-size: 24px; /* 必要ならフォントサイズも調整 */
+        text-align: center;
+    }
+
+    .caution p {
+        margin: 0;
+    }
+
+    .profile {
+        display: inline;
+    }
+
+    .profile img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 auto; /* 中央揃え */
+        display: block; /* ブロック要素にする */
+        margin-bottom: 20px;
+    }
+
+    .music-button {
+        max-width: 280px; /* ボタンの幅を統一 */
+    }
+}
