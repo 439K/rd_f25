@@ -41,7 +41,7 @@ const allProfileData = [
         img: 'src/images/昊.png',
         desc: 'ゲーム制作のためにいろいろものを作っています<br>IGC²でゲームの展示、INIAD Artworksで絵の展示をしています<br>学部2年',
         sns: [
-            { type: 'youtube', url: 'https://www.youtube.com/@marine-music', width: 60 },
+            { type: 'youtube', url: 'https://www.youtube.com/@miz_oasis', width: 60 },
             { type: 'x', url: 'https://x.com/miz_oasis', width: 35 }
         ]
     },
