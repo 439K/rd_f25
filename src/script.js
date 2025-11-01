@@ -3,26 +3,26 @@
 // --- 楽曲データベース ---
 const allMusicData = [
     // 439K
-    { title: 'OrKstra No.3 "Link"', file: 'src/audio/Link.mp3', artist: '439K', category: 'A', volume: 1.0, jacket: null },
-    { title: 'Throw Three', file: 'src/audio/Throw Three.mp3', artist: '439K', category: 'B', volume: 1.0, jacket: null },
-    { title: 'Darts Night', file: 'src/audio/Darts Night.mp3', artist: '439K', category: 'B', volume: 1.0, jacket: null },
+    { title: 'OrKstra No.3 "Link"', file: 'src/audio/Link.mp3', artist: '439K', category: 'A', volume: 1.0, jacket: 'src/images/jacket/Link.png' },
+    { title: 'Throw Three', file: 'src/audio/Throw Three.mp3', artist: '439K', category: 'B', volume: 1.0, jacket: 'src/images/jacket/ThrowThree.png' },
+    { title: 'Darts Night', file: 'src/audio/Darts Night.mp3', artist: '439K', category: 'B', volume: 1.0, jacket: 'src/images/jacket/DartsNight.png' },
     // 昊
     { title: 'LittleAngel', file: 'src/audio/LittleAngel.mp3', artist: '昊', category: 'B', volume: 1.0, jacket: 'src/images/jacket/LittleAngel.png' },
     { title: 'みな底の光都', file: 'src/audio/みな底の光都.mp3', artist: '昊', category: 'B', volume: 1.0, jacket: 'src/images/jacket/みな底の光都.png' },
     { title: 'Oasis', file: 'src/audio/Oasis.mp3', artist: '昊', category: 'B', volume: 1.0, jacket: 'src/images/jacket/Oasis.png' },
     // あっしー
-    { title: 'Packaged Remix', file: 'src/audio/Packaged Remix.wav', artist: 'あっしー', category: 'B', volume: 1.0, jacket: 'src/images/jacket/Packaged Remix.png' },
+    { title: 'Packaged Remix', file: 'src/audio/Packaged Remix.wav', artist: 'あっしー', category: 'B', volume: 0.5, jacket: 'src/images/jacket/Packaged Remix.png' },
     // しゅうへい
-    { title: '霧', file: 'src/audio/霧.mp3', artist: 'しゅうへい', category: 'A', volume: 1.0, jacket: 'src/images/jacket/霧.png' },
-    { title: 'まったりティータイム', file: 'src/audio/まったりティータイム.mp3', artist: 'しゅうへい', category: 'B', volume: 1.0, jacket: 'src/images/jacket/まったりティータイム.png' },
+    { title: '霧', file: 'src/audio/霧.mp3', artist: 'しゅうへい', category: 'A', volume: 0.7, jacket: 'src/images/jacket/霧.png' },
+    { title: 'まったりティータイム', file: 'src/audio/まったりティータイム.mp3', artist: 'しゅうへい', category: 'B', volume: 0.7, jacket: 'src/images/jacket/まったりティータイム.png' },
     // 灘
     { title: 'nanika', file: 'src/audio/nanika.wav', artist: '灘', category: 'B', volume: 1.0, jacket: 'src/images/jacket/rd.png' },
     // よつや
     { title: '（準備中）', file: 'src/audio/.mp3', artist: 'よつや', category: 'B', volume: 1.0, jacket: 'src/images/jacket/rd.png' },
     // SynaPse
-    { title: 'Ready Go!', file: 'src/audio/Ready Go!.wav', artist: 'SynaPse', category: 'B', volume: 1.0, jacket: 'src/images/jacket/rd.png' },
+    { title: 'Ready Go!', file: 'src/audio/Ready Go!.wav', artist: 'SynaPse', category: 'B', volume: 0.5, jacket: 'src/images/jacket/rd.png' },
     // 界潜
-    { title: '細雪', file: 'src/audio/細雪.wav', artist: '界潜', category: 'B', volume: 1.0, jacket: 'src/images/jacket/細雪.png' }
+    { title: '細雪', file: 'src/audio/細雪.wav', artist: '界潜', category: 'B', volume: 0.4, jacket: 'src/images/jacket/細雪.png' }
 ];
 
 // --- ★★★ 新規追加：プロフィールデータベース ★★★ ---
