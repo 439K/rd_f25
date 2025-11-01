@@ -32,7 +32,7 @@ const allProfileData = [
         img: 'src/images/439K.jpg',
         desc: 'オーケストラやサウンドトラックが好きです',
         sns: [
-            { type: 'youtube', url: 'https://www.youtube.com/@439_K', width: 60 },
+            { type: 'youtube', url: 'https://www.youtube.com/@439K_DTM', width: 60 },
             { type: 'soundcloud', url: 'https://soundcloud.com/439k', width: 55 }
         ]
     },
