@@ -18,7 +18,7 @@ const allMusicData = [
     // 灘
     { title: 'nanika', file: 'src/audio/nanika.wav', artist: '灘', category: 'B', volume: 1.0, jacket: 'src/images/jacket/rd.png' },
     // よつや
-    { title: '（準備中）', file: 'src/audio/.mp3', artist: 'よつや', category: 'B', volume: 1.0, jacket: 'src/images/jacket/rd.png' },
+    { title: 'correct?', file: 'src/audio/correct.wav', artist: 'よつや', category: 'B', volume: 1.0, jacket: 'src/images/jacket/rd.png' },
     // SynaPse
     { title: 'Ready Go!', file: 'src/audio/Ready Go!.wav', artist: 'SynaPse', category: 'B', volume: 0.5, jacket: 'src/images/jacket/rd.png' },
     // 界潜
@@ -68,7 +68,7 @@ const allProfileData = [
     {
         name: 'よつや',
         img: 'src/images/Raison_icon.png', // デフォルトアイコン
-        desc: '',
+        desc: 'INIAD4年生。<br>今年が最後の赤羽台祭です。',
         sns: []
     },
     {
