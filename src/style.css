@@ -6,7 +6,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f7fae6;
+    /* ★ 背景色をクリーム色からクリーンな白に近いグレーに変更 */
+    background-color: #f8f9fa;
+    color: #333; /* デフォルトの文字色 */
 }
 
 /* コンテンツ全体のレイアウトを中央に */
@@ -18,55 +20,6 @@ body {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-}
-
-/* プロフィール部分と楽曲一覧をまとめて表示するためのレイアウト */
-.profile-list {
-    display: grid;
-    grid-template-columns: 1fr; /* デフォルトで1列 */
-    grid-gap: 30px;
-    margin: 30px;
-}
-
-.profile-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 縦方向の中央揃え */
-    justify-content: center; /* 横方向の中央揃え */
-    background-color: #fff;
-    padding: 50px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-/* プロフィール部分のレイアウト */
-.profile {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 25px;
-}
-
-.profile img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-right: 30px;
-    filter: drop-shadow(3px 3px 3px #777777);
-}
-
-.profile-details h1 {
-    font-size: 28px;
-    margin: 0;
-    color: #333;
-}
-
-.profile-details p {
-    font-size: 16px;
-    color: #777;
-    margin-top: 10px;
 }
 
 /* 楽曲一覧部分 */
@@ -88,16 +41,22 @@ audio {
     border-radius: 5px;
 }
 
+/* ★ ヘッダーバーのデザインをコンセプトカラーに変更 */
 .top {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f4fabc;
+    background-color: #191C4F; /* ★ コンセプトカラー */
+    color: #ffffff; /* ★ 文字色を白に */
+    padding: 10px;
+    padding-top: 20px;
 }
 
 .top h1 {
     margin-top: 20px;
-    filter: drop-shadow(3px 3px 3px #777777);
+    margin-bottom: 20px; /* ★ 上下マージンを統一 */
+    color: #ffffff; /* ★ 文字色を白に */
+    filter: none; /* ★ 影を削除 */
 }
 
 .top img {
@@ -105,15 +64,17 @@ audio {
     height: 150px;
     object-fit: cover;
     margin-right: 30px;
-    filter: drop-shadow(3px 3px 3px #777777);
+    filter: none; /* ★ 影を削除 */
 }
 
+/* ★ 注意書きバーのデザインを変更 */
 .caution {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(255, 200, 97);
-    padding: 20px;
+    background-color: #eef2f9; /* ★ 柔らかい情報系の色に */
+    color: #555;
+    padding: 15px 20px; /* ★ パディングを少し調整 */
 }
 
 .tip {
@@ -135,18 +96,16 @@ audio {
     font-size: 15px;
 }
 
+/* ★ 見出し (H2) にコンセプトカラーを適用 */
+.tip2 h2 {
+    color: #191C4F;
+    filter: none;
+}
+
 .tip2 img {
     filter: drop-shadow(3px 3px 3px #777777);
 }
 
-
-.sns {
-    display: flex;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    grid-gap: 45px;
-    align-items: center;
-}
 
 .song-list {
     padding: 20px;
@@ -167,17 +126,21 @@ audio {
     background-color: #ddd;
 }
 
+/* ★ フッターのデザインをクリーンに変更 */
 .player-footer {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #f1f1f1;
+    background-color: #ffffff; /* ★ 白背景に変更 */
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    /* ★ 影をより繊細に */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    border-top: 1px solid #e9ecef; /* ★ 上部に細い境界線 */
+    color: #333;
 }
 
 .player-info {
@@ -194,9 +157,11 @@ audio {
     justify-content: center;
 }
 
+/* ★ シークバーの色にコンセプトカラーを適用 */
 #seek-bar {
     margin: 0 10px;
     width: 100%;
+    accent-color: #191C4F; /* ★ スライダーの色を変更 */
 }
 
 button {
@@ -230,7 +195,7 @@ button {
     align-items: center;
     justify-content: center;
     padding-top: 15px;
-    padding-bottom: 120px;
+    padding-bottom: 150px;
 }
 
 .song-title {
@@ -244,47 +209,56 @@ button {
     color: #333;
 }
 
+/* ★★★ 楽曲ボタンのスタイルを大幅に変更 ★★★ */
 .music-button {
     font-family: "Noto Sans JP", sans-serif;
-    background-color: #f4fabc; /* デフォルトのボタンカラー */
-    padding: 10px 20px; /* サイズを固定 */
-    border: none;
+    /* ★ スタイリッシュな「ゴーストボタン」に変更 */
+    background-color: transparent;
+    border: 1px solid #191C4F; /* ★ コンセプトカラーの枠線 */
+    color: #191C4F;           /* ★ コンセプトカラーの文字 */
+    
+    padding: 10px 20px;
     cursor: pointer;
     font-size: 18px;
-    width: 350px; /* ボタンの幅を統一 */
+    font-weight: 500; /* ★ 少し太く */
+    width: 100%; /* ★ 幅を100%に */
     text-align: center;
-    border-radius: 5px;
-    box-shadow: 3px 3px 3px #aaa;
-    transition: background-color 0.3s ease; /* 色が滑らかに変わるようにトランジションを追加 */
-    cursor: pointer; /* ボタンらしく見せる */
+    border-radius: 6px; /* ★ 角丸を少し調整 */
+    box-shadow: none; /* ★ 影を削除 */
+    transition: all 0.2s ease; /* ★ トランジションを全体に適用 */
+    max-width: 350px;
 }
 
+/* ★ ボタンホバー時のスタイル */
 .music-button:hover {
-    background-color: #e5e45a; /* ホバー時に少し濃い色にする */
+    background-color: #191C4F; /* ★ コンセプトカラーで塗りつぶし */
+    color: #ffffff;           /* ★ 文字を白に */
+    transform: translateY(-2px); /* ★ 少し浮き上がる */
+    box-shadow: 0 4px 8px rgba(25, 28, 79, 0.2); /* ★ 青い影 */
 }
 
+/* ★ 再生中のボタンスタイル (★ 水色に変更) */
 .music-button.playing {
-    background-color: #ffcc00; /* 再生中のボタンの色 */
+    background-color: #4a69bd; /* ★ 再生中の色は水色 */
+    color: #ffffff;           /* ★ 文字を白に */
+    border-color: #4a69bd;    /* ★ 枠線も水色に */
+    box-shadow: 0 4px 8px rgba(74, 105, 189, 0.2);
 }
 
-/* 再生中かつホバー時のスタイル */
+/* ★ 再生中かつホバー時のスタイル */
 .music-button.playing:hover {
-    background-color: #ffbf00; /* 再生中でもホバーした時に少し濃くする */
+    background-color: #3e5aa8; /* ★ 少し濃い水色 */
+    border-color: #3e5aa8;
+    transform: translateY(-2px);
 }
 
 /* レスポンシブ対応 */
-@media (min-width: 900px) {
-    .profile-list {
-        grid-template-columns: 1fr 1fr; /* 幅900px以上で2列表示 */
-    }
-}
-
 @media (max-width: 500px) {
     .top {
         display: flex;
         flex-direction: column; /* 子要素を縦に並べる */
         align-items: center; /* 子要素を中央に揃える */
-        background-color: #f4fabc; /* 背景色を元の色に */
+        background-color: #191C4F; /* ★ 色を統一 */
     }
 
     .top img {
@@ -294,8 +268,8 @@ button {
     }
 
     .top h1 {
-        margin-top: 0;
-        margin-bottom: 20px; /* 下に少しスペースを空ける */
+        margin-top: 10px;
+        margin-bottom: 10px; /* 下に少しスペースを空ける */
         font-size: 24px; /* 必要ならフォントサイズも調整 */
         text-align: center;
     }
@@ -304,21 +278,374 @@ button {
         margin: 0;
     }
 
-    .profile {
-        display: inline;
-    }
-
-    .profile img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 50%;
-        margin: 0 auto; /* 中央揃え */
-        display: block; /* ブロック要素にする */
-        margin-bottom: 20px;
-    }
-
     .music-button {
         max-width: 280px; /* ボタンの幅を統一 */
+    }
+}
+
+/* ===== ★ここから下が変更・追加されたCSS (ロジック修正版)★ ===== */
+
+/* テーマリスト（セグメントコンテナ） */
+.theme-list {
+    display: grid;
+    grid-template-columns: 1fr; /* デフォルトで1列 */
+    grid-gap: 30px;
+    margin: 30px 15px; /* ★ 上下30px, 左右15px に変更 */
+}
+
+/* ★ セグメント（カード）のデザインを調整 */
+.theme-segment {
+    background-color: #ffffff;
+    /* ★ パディングを調整 (左右 30px) */
+    padding: 20px 30px 0px; 
+    border-radius: 8px; /* ★ 角丸を少し調整 */
+    /* ★ 影をより繊細に */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef; /* ★ 細い境界線を追加 */
+}
+
+/* ★ セグメントヘッダー（開閉部分） */
+.theme-header {
+    display: flex;
+    align-items: center;
+    /* ★ パディング変更に合わせてネガティブマージンを調整 */
+    margin: -20px -30px 0;
+    padding: 20px 30px;
+    border-bottom: 1px solid #e9ecef; /* ★ 境界線 */
+    transition: background-color 0.2s ease;
+}
+
+.theme-header:hover {
+    background-color: #fafafa; /* ★ ホバー時に少し色付け */
+}
+
+.toggle-icon {
+    font-size: 14px;
+    margin-right: 15px;
+    color: #555;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.theme-title-group {
+    flex: 1;
+}
+
+.theme-header h2 {
+    font-size: 24px;
+    margin: 0 0 5px 0; /* ★ マージン調整 */
+    color: #191C4F; /* ★ コンセプトカラー */
+}
+
+.theme-header .theme-description {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+    text-align: left; /* 左揃え */
+    line-height: 1.6;
+}
+
+/* ランダム再生ボタンのコンテナ */
+.random-play-container {
+    padding-top: 30px;
+    text-align: center;
+    /* ★ 楽曲リストとの境界線 */
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.random-play-button {
+    width: 100%;
+    max-width: 400px; /* 幅を少し広めに設定 */
+    /* .music-button のスタイルが適用されます */
+}
+/* 楽曲リストのコンテナ */
+.music-list-theme {
+    display: grid;
+    grid-template-columns: 1fr; /* スマホ表示 */
+    gap: 25px 20px; /* ★ 隙間を調整 */
+    justify-items: center; /* 中央揃え */
+    transition: all 0.3s ease-out;
+    transform-origin: top;
+    max-height: 32000px; /* ★ 開閉アニメーション用 */
+    overflow: hidden;
+}
+
+/* ★ 最小化時のスタイル */
+.theme-segment.minimized .music-list-theme {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+}
+
+/* ★★★ 楽曲アイテムのデザイン変更 ★★★ */
+.music-item {
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 400px; /* ボタンの最大幅に合わせて調整 */
+    text-align: center;
+    
+    /* ★ 背景色分けのためのパディングと角丸 */
+    padding: 20px 15px 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+/* ★★★ 修正点：ジャケットコンテナスタイル ★★★ */
+.jacket-container {
+    width: 100%;
+    max-width: 250px; /* 最大幅は維持 */
+    height: auto;
+    aspect-ratio: 1 / 1; /* ★ 1:1 (正方形) の比率を強制 */
+    margin: 0 auto 15px; /* 上下左右中央、下にマージン */
+    border-radius: 6px;
+    
+    /* ★ ジャケット画像は背景画像として表示 */
+    background-size: contain; /* ★★★ 切り取り(cover)から全体表示(contain)に変更 ★★★ */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* ★ ジャケット画像が無い場合のデフォルトスタイル */
+    background-color: transparent;
+    border: none;
+    
+    /* ★ 画像がない場合に表示するプレースホルダー用 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ★ 画像がない場合のプレースホルダー（音符アイコン） */
+.jacket-placeholder::before {
+    content: '♪'; /* 例として音符 */
+    font-size: 48px;
+    color: #ccc;
+    font-family: sans-serif; /* 音符が文字化けしないように */
+}
+
+/* ★ ジャケット画像がある場合は、プレースホルダーを非表示にする */
+.jacket-container[style*="background-image"] .jacket-placeholder {
+    display: none;
+}
+/* ★★★ 修正点ここまで ★★★ */
+
+
+/* ★ 楽曲に作曲者名を表示するスタイル */
+.song-artist-credit {
+    font-size: 15px;
+    color: #555;
+    margin-top: -10px; /* タイトルとの間隔を詰める */
+    margin-bottom: 15px;
+}
+
+/* ボタンの幅を調整 */
+.music-button {
+    width: 100%; /* 親要素の幅に合わせる */
+    max-width: 350px; /* ただし最大幅は維持 */
+}
+
+/* ★★★ 楽曲の色分け (背景色版) ★★★ */
+/* category='A' の色 (薄い青) */
+.music-item[data-category="A"] {
+    background-color: #eef2f9; /* メインカラーに合わせた薄い青 */
+}
+/* category='B' の色 (薄いクリーム色) */
+.music-item[data-category="B"] {
+    background-color: #fefbec; /* 以前の黄色系統の薄い色 */
+}
+
+/* ★★★ 新規追加：プロフィールリスト（セグメント2）のスタイル ★★★ */
+.profile-list-new {
+    display: grid;
+    grid-template-columns: 1fr; /* デフォルトは1列 */
+    gap: 30px;
+    margin-top: 20px;
+    /* ★ 開閉アニメーション用 */
+    transition: all 0.3s ease-out;
+    transform-origin: top;
+    max-height: 8000px;
+    overflow: hidden;
+}
+
+.profile-item-new {
+    /* ★ カードスタイルを微調整 */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px; /* ★ 統一 */
+    border: 1px solid #e9ecef; /* ★ 統一 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03); /* ★ 繊細な影 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.profile-item-new:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.profile-new {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-new img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    filter: drop-shadow(2px 2px 2px #aaa);
+}
+
+/* ★ プロフィール名にコンセプトカラーを適用 */
+.profile-details-new h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #191C4F;
+}
+
+.profile-details-new p {
+    font-size: 14px;
+    color: #777;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.sns-new {
+    display: flex;
+    justify-content: flex-end; /* 右揃え */
+    grid-gap: 25px;
+    align-items: center;
+}
+.sns-new img {
+    opacity: 0.8;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.sns-new img:hover {
+    opacity: 1;
+    transform: scale(1.1); /* ★ ホバー時に少し拡大 */
+}
+
+
+/* 既存の .profile-list 関連のスタイルを上書き (不要なため) */
+.profile-list, .profile, .profile-details, .sns {
+    display: none; /* これらはもう使わないので非表示に */
+}
+
+/* --- レスポンシブ調整 --- */
+
+/* 2列表示（楽曲） */
+@media (min-width: 980px) {
+    .music-list-theme {
+        grid-template-columns: 1fr 1fr; /* 980px以上で2列 */
+        margin-bottom: 20px;
+    }
+}
+
+/* ★★★ モバイル（開閉機能が有効 1419px未満）のスタイル ★★★ */
+@media (max-width: 1419px) {
+    .theme-header {
+        cursor: pointer; /* モバイルではクリック可能に */
+    }
+    .toggle-icon {
+        display: block; /* モバイルでのみ表示 */
+    }
+
+    /* ★ 最小化時、ランダム再生ボタンも非表示に */
+    .theme-segment.minimized .random-play-container {
+        display: none;
+    }
+    
+    /* ★ 最小化時、プロフィールリストも非表示に */
+    .theme-segment.minimized .profile-list-new {
+        display: none; /* ★ grid ではなく none */
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .theme-segment.minimized .toggle-icon {
+        transform: rotate(-90deg); /* アイコンを回転（▶） */
+    }
+}
+
+
+/* 2列表示（テーマ） */
+@media (min-width: 1420px) {
+    /* 既存の .profile-list 2列設定を .theme-list に適用 */
+    .theme-list {
+        /* ★★★ 7:3 のレイアウトに変更 ★★★ */
+        grid-template-columns: 7fr 3fr;
+        grid-gap: 40px; /* セグメント間の隙間を少し広げる */
+        margin: 40px 30px; /* ★ PCでの余白を調整 */
+    }
+
+    /* ★ 楽曲リストは常に2列に（1000pxで3列にならないように）*/
+    #music-segment .music-list-theme {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* ★ プロフィールリストは常に1列に */
+    #profile-segment .profile-list-new {
+        grid-template-columns: 1fr;
+    }
+    
+    /* ★ PC（900px以上）では、.minimized が付いても強制的に展開状態にする */
+    .theme-header {
+        cursor: default; /* PCではクリックカーソルにしない */
+    }
+    .toggle-icon {
+        display: none; /* PCでは開閉アイコンを非表示 */
+    }
+    .theme-header:hover {
+        background-color: transparent; /* PCではホバーエフェクトを無効化 */
+    }
+    
+    /* .minimized クラスが付いても、PCでは強制的に表示する */
+    .theme-segment.minimized .music-list-theme {
+        max-height: 5000px; /* 強制的に高さを戻す */
+        opacity: 1;
+        transform: translateY(0);
+        margin-top: 30px;
+    }
+    /* ★ プロフィールリストも強制的に展開 */
+    .theme-segment.minimized .profile-list-new {
+        display: grid; /* ★ none を grid に上書き */
+        max-height: 5000px;
+        opacity: 1;
+    }
+    .theme-segment.minimized .toggle-icon {
+        transform: rotate(0deg); /* 回転もリセット */
+    }
+}
+
+/* 既存のスマホ用スタイル調整（.profile を隠したため） */
+@media (max-width: 500px) {
+    .profile {
+        display: none; /* 非表示 */
+    }
+    .music-button {
+        max-width: 280px; /* ボタンの幅を統一 */
+    }
+
+    /* ★ スマホ表示ではセグメントの左右パディングを減らす */
+    .theme-segment {
+        padding: 20px 20px 20px 20px; /* ★ 最終パディングを 40px に */
+    }
+    /* ★ ヘッダーのネガティブマージンも調整 */
+    .theme-header {
+        margin: -20px -20px 0;
+        padding: 20px 20px;
+    }
+
+    .theme-segment.minimized {
+        padding-bottom: 0px;
+    }
+}
+
+@media (min-width: 980px) {
+    .toggle-icon {
+        display: none; /* PCでは開閉アイコンを非表示 */
     }
 }
