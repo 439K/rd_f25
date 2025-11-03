@@ -23,7 +23,9 @@ const allMusicData = [
     // SynaPse
     { title: 'Ready Go!', file: 'src/audio/Ready Go!.mp3', artist: 'SynaPse', category: 'B', volume: 0.5, jacket: 'src/images/jacket/rd.png' },
     // 界潜
-    { title: '細雪', file: 'src/audio/細雪.mp3', artist: '界潜', category: 'B', volume: 0.4, jacket: 'src/images/jacket/細雪.png' }
+    { title: '細雪', file: 'src/audio/細雪.mp3', artist: '界潜', category: 'B', volume: 0.4, jacket: 'src/images/jacket/細雪.png' },
+    // セキセイ
+    { title: '何者にもなれなくても', file: 'src/audio/何者にもなれなくても.mp3', artist: 'セキセイ', category: 'B', volume: 0.8, jacket: 'src/images/jacket/何者にもなれなくても.png' }
 ];
 
 // --- ★★★ 新規追加：プロフィールデータベース ★★★ ---
@@ -83,6 +85,15 @@ const allProfileData = [
         img: 'src/images/界潜.png',
         desc: '曲を作っています。',
         sns: []
+    },
+    {
+        name: 'セキセイ',
+        img: 'src/images/セキセイ.png',
+        desc: '曲や動画を作ったり歌ったりデザインを作ったりしてます',
+        sns: [
+            { type: 'youtube', url: 'https://www.youtube.com/@sekisei2424', width: 60 },
+            { type: 'x', url: 'https://x.com/sekisei2424', width: 35 }
+        ]
     }
 ];
 // SNSアイコンのパス定義
